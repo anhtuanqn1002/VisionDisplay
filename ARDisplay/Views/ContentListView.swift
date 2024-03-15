@@ -11,6 +11,10 @@ import RealityKitContent
 
 struct ContentListView: View {
     @State private var selectedCourse: Course? = nil
+    @Environment(\.openImmersiveSpace) var openImmersiveScene
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveScene
+    @State private var isShowingImmersive = false
+    
     private var courses = [
         Course(name: "Window App", content: """
           A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
@@ -52,14 +56,41 @@ struct ContentListView: View {
                 Image(systemName: "cube")
                 Text("Volume")
             }
-            Text("Immersive Tab")
-                .font(.largeTitle)
-                .foregroundColor(.orange)
-                .tabItem {
-                    Image(systemName: "globe")
-                    Text("Immersive")
+            NavigationSplitView {
+                Text("Immersive Tab")
+                    .font(.largeTitle)
+                    .foregroundColor(.orange)
+            } detail: {
+                // 20
+                HStack {
+                    Button("Open ImmersiveSpace") {
+                        Task {
+                            let result = await openImmersiveScene(id: "ImmersiveScene")
+                            isShowingImmersive = true
+                            if case .error = result {
+                                print("Error loading scene.")
+                                isShowingImmersive = false
+                            }
+                        }
+                    }.foregroundColor(.blue)
                 }
-        }
+            }
+            
+            .tabItem {
+                Image(systemName: "globe")
+                Text("Immersive")
+            }
+        }.padding()
+            .opacity(isShowingImmersive ? 0 : 1)
+        
+        Button("Close ImmersiveSpace") {
+            Task {
+                await dismissImmersiveScene()
+                print("Dismissing Complete")
+                isShowingImmersive = false
+            }
+        }.foregroundColor(.red)
+            .opacity(isShowingImmersive ? 1 : 0)
     }
 }
 

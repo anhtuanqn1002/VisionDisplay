@@ -10,6 +10,9 @@
 		AB5591652BA43F3C00F05B6D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5591642BA43F3C00F05B6D /* CourseView.swift */; };
 		AB5591672BA43FE600F05B6D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5591662BA43FE600F05B6D /* Course.swift */; };
 		AB55916B2BA44C3C00F05B6D /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB55916A2BA44C3C00F05B6D /* VolumeView.swift */; };
+		AB55916E2BA44E4300F05B6D /* sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = AB55916C2BA44E4300F05B6D /* sunlight.skybox */; };
+		AB5591702BA44E6A00F05B6D /* SkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB55916F2BA44E6A00F05B6D /* SkyView.swift */; };
+		AB5591722BA44E8300F05B6D /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5591712BA44E8300F05B6D /* ImmersiveView.swift */; };
 		AB7CD66C2BA2F566008939C4 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = AB7CD66B2BA2F566008939C4 /* RealityKitContent */; };
 		AB7CD66E2BA2F566008939C4 /* ARDisplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CD66D2BA2F566008939C4 /* ARDisplayApp.swift */; };
 		AB7CD6702BA2F566008939C4 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CD66F2BA2F566008939C4 /* ContentListView.swift */; };
@@ -21,6 +24,9 @@
 		AB5591642BA43F3C00F05B6D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		AB5591662BA43FE600F05B6D /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		AB55916A2BA44C3C00F05B6D /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		AB55916C2BA44E4300F05B6D /* sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = sunlight.skybox; sourceTree = "<group>"; };
+		AB55916F2BA44E6A00F05B6D /* SkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyView.swift; sourceTree = "<group>"; };
+		AB5591712BA44E8300F05B6D /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		AB7CD6662BA2F566008939C4 /* ARDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7CD66A2BA2F566008939C4 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		AB7CD66D2BA2F566008939C4 /* ARDisplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDisplayApp.swift; sourceTree = "<group>"; };
@@ -56,8 +62,18 @@
 				AB7CD66F2BA2F566008939C4 /* ContentListView.swift */,
 				AB55916A2BA44C3C00F05B6D /* VolumeView.swift */,
 				AB5591642BA43F3C00F05B6D /* CourseView.swift */,
+				AB55916F2BA44E6A00F05B6D /* SkyView.swift */,
+				AB5591712BA44E8300F05B6D /* ImmersiveView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AB55916D2BA44E4300F05B6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB55916C2BA44E4300F05B6D /* sunlight.skybox */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AB7CD65D2BA2F566008939C4 = {
@@ -80,6 +96,7 @@
 		AB7CD6682BA2F566008939C4 /* ARDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				AB55916D2BA44E4300F05B6D /* Resources */,
 				AB5591682BA4424900F05B6D /* Model */,
 				AB5591692BA4425400F05B6D /* Views */,
 				AB7CD66D2BA2F566008939C4 /* ARDisplayApp.swift */,
@@ -168,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7CD6752BA2F568008939C4 /* Preview Assets.xcassets in Resources */,
+				AB55916E2BA44E4300F05B6D /* sunlight.skybox in Resources */,
 				AB7CD6722BA2F568008939C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,8 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5591702BA44E6A00F05B6D /* SkyView.swift in Sources */,
 				AB5591672BA43FE600F05B6D /* Course.swift in Sources */,
 				AB7CD6702BA2F566008939C4 /* ContentListView.swift in Sources */,
+				AB5591722BA44E8300F05B6D /* ImmersiveView.swift in Sources */,
 				AB55916B2BA44C3C00F05B6D /* VolumeView.swift in Sources */,
 				AB7CD66E2BA2F566008939C4 /* ARDisplayApp.swift in Sources */,
 				AB5591652BA43F3C00F05B6D /* CourseView.swift in Sources */,
