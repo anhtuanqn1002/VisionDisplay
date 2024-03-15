@@ -12,6 +12,6 @@ struct ARDisplayApp: App {
     var body: some Scene {
         WindowGroup {
             ContentListView()
-        }
+        }.windowStyle(.plain)
     }
 }
