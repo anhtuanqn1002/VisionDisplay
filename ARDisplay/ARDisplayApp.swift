@@ -13,7 +13,7 @@ struct ARDisplayApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentListView()
         }
     }
 }
